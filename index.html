@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website</title>
+
+    <meta name="theme-color" content="hotpink">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="logo.png">
+
+</head>
+
+<body>
+    <section>
+        <div class="custom-shape-divider-top-1629716217">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+	    </svg>
+        </div>
+        <div class="custom-shape-divider-bottom-1629716449">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+    </svg>
+        </div>
+        <div class="content">
+            <div id="background-wrap">
+                <div class="bubble x1"></div>
+                <div class="bubble x2"></div>
+                <div class="bubble x3"></div>
+                <div class="bubble x4"></div>
+                <div class="bubble x5"></div>
+                <div class="bubble x6"></div>
+                <div class="bubble x7"></div>
+                <div class="bubble x8"></div>
+                <div class="bubble x9"></div>
+                <div class="bubble x10"></div>
+
+                <div class="bubble x1"></div>
+                <div class="bubble x2"></div>
+                <div class="bubble x3"></div>
+                <div class="bubble x4"></div>
+                <div class="bubble x5"></div>
+                <div class="bubble x6"></div>
+                <div class="bubble x7"></div>
+                <div class="bubble x8"></div>
+                <div class="bubble x9"></div>
+                <div class="bubble x10"></div>
+            </div>
+            <div class="general">
+                <h1 id="quote">QUOTE</h1>
+                <h1 id="author">AUTHOR</h1>
+                <h1 id="date">DATE</h1>
+                <p id="fact">FACT FILE</p>
+                <h1 id="weather">WEATHER</h1>
+                <img id="weatherIcon" src="">
+            </div>
+            <div class="health">
+                <div class="nutrition">
+                    <h1>Nutrition</h1>
+                    <div class="bmiCalculator">
+                        <input type="text" name="weight" id="weight" placeholder="Enter Your Weight">
+                        <input type="text" name="height" id="height" placeholder="Enter Your Height">
+                        <button id="submitInfo" base="#2d2d75" textColor="whitesmoke" hovered="rgb(27 27 104)">Submit</button>
+                        <h1 id="bmi">BMI value is here</h1>
+                    </div>
+
+                    <div id="line"></div>
+
+                </div>
+
+                <div class="grocery">
+                    <h1>Grocery</h1>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.Cnho6S-DiGkTEzgPEZo-egHaJ_&pid=Api&P=0&w=300&h=300" id="groceryImage">
+                    <h2>My Shopping List</h2>
+                    <div id="groceryList">
+                        <ol type="a" id="groceryListOl">
+
+                        </ol>
+                    </div>
+                    <input type="text" name="groceryItem" id="groceryItem" placeholder="Enter item" />
+                    <button id="addItem" base="#2d2d75" textColor="whitesmoke" hovered="rgb(27 27 104)">Add an Item</button>
+                    <button id="saveList" base="#2d2d75" textColor="whitesmoke" hovered="rgb(27 27 104)">Save list</button>
+                    <button id="clearList" base="#2d2d75" textColor="whitesmoke" hovered="rgb(27 27 104)">Delete list</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const buttons = document.querySelectorAll('button')
+        buttons.forEach(button => {
+            button.style.border = '3px solid ' + button.getAttribute('base')
+            button.style.color = button.getAttribute('base')
+            button.onmouseover = () => {
+                button.style.background = button.getAttribute('base')
+                button.style.color = button.getAttribute('textColor')
+                button.style.boxShadow = "4px 4px 5px 5px " + button.getAttribute('hovered')
+            }
+            button.onclick = () => button.style.background = button.getAttribute('hovered')
+            button.onmouseleave = () => {
+                button.style.background = 'transparent'
+                button.style.color = button.getAttribute('base')
+            }
+        })
+        const body = document.querySelector('body')
+        body.style.backgroundImage = "url('abstract.jpg')"
+    </script>
+    <script src="script.js"></script>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
